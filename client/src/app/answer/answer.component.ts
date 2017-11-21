@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AnswerComponent implements OnInit {
 
-  question: any;
+  question = {_id: 0};
   answer = {answer: '', details: '', username: '' };
   constructor(private _qaService: QaService, private _router: Router, private _route: ActivatedRoute) { 
     if (this._qaService.name === '') {

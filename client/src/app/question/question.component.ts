@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-  question: String = '';
+  question = {_id: 0};
   constructor(private _qaService: QaService, private _router: Router, private _route: ActivatedRoute) {
     if (this._qaService.name === '') {
       console.log('Not logged in!');
